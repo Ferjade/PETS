@@ -13,7 +13,7 @@
 <body>
     <div class="box">
         <div class="box-content">
-            <img src="pets.png" class="image">
+            <img src="images/pets-banner.png" class="image">
             <h3 style="padding: 1rem 1rem 0 1rem;">Register for a free account</h3>
             <form class="row g-6" action="">
                 <div class="col-md-6 form" >
