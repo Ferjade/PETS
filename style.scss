@@ -1,0 +1,552 @@
+$dark: #ff862f;
+$light: #fbbe28;
+$brightly: #ff1e00;
+$dimly: #e8f9fd;
+$alert: #59ce8f;
+$white: #ffffff;
+$black: #0000;
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: $white;
+    scroll-behavior: smooth;
+}
+
+// body{
+//     scroll-snap-type: y mandatory;
+//     overflow-y: scroll;
+//     height: 100vh;
+// }
+
+
+
+// Hero section
+// NAV BAR
+nav{
+    background-color: $dark;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+// LOGO
+.logo{
+    width: 165px;
+    position: relative;
+    left: 60px;
+    border-radius: 10px;
+}
+
+
+
+// Nav List
+nav ul{
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    left: 5%;
+    padding: 0;
+}
+
+nav ul li a{
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+    height: 40px;
+    margin: 3px;
+    padding: 0 20px;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+    color: $white;
+}
+
+nav ul li a:hover{
+    // background-color: $light;
+    color: $brightly;
+    box-shadow: 5px 10px 30px rgba(252, 59, 0, 0.397);
+    border: 1px solid $white;
+}
+
+.active{
+    background-color: $light;
+    color: $brightly;
+    box-shadow: 5px 10px 30px rgba(252, 59, 0, 0.397);
+    border: 1px solid $white;
+} 
+
+
+
+// Search box
+.search-bar{
+    background: $white;
+    border-radius: 50px;
+    outline: none;
+}
+
+nav form button{
+    background: transparent;
+    border: none;
+}
+
+.search-area{
+    width: 100px;
+    padding: 3px 10px;
+    border-radius: 50px;
+    outline: none;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    color: gray;
+}
+
+
+nav form button:hover{
+    color: $light;
+}
+
+.loginbtn{
+    width: 100px;
+    padding: 2px 15px;
+    border-radius: 70px;
+    outline: none;
+    background: $light;
+    border:1px solid $white;
+    font-weight: 600;
+    color: $dimly;
+    position: relative;
+    right: 100px;
+    z-index: 2;
+}
+
+
+
+// Main// 
+.main{
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    background: linear-gradient(360deg, $dark 28.84%, $light 65.18%);
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.main >*{
+    flex-basis: 100%;
+}
+
+
+.main > .maintext{
+    color: $white;
+    position: relative;
+    left: 150px;
+    letter-spacing: 3px;
+}
+.main > .maintext h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: $white;
+    letter-spacing: 3px;
+}
+
+
+.main a button{
+    width: 160px;
+    padding: 10px 15px;
+    border-radius: 70px;
+    outline: none;
+    background: $light;
+    border:1px solid $dimly;
+    font-size: larger;
+    font-weight: 600;
+    color: $dimly;
+    position: relative;
+}
+
+// Main Image
+.main div img{
+    width: 800px;
+    position: relative;
+    top: 82px;
+    right: 115px;
+    z-index: 2;
+}
+
+.separator{
+    width: 100%;     
+    position: absolute;;
+    top: 490px;
+    left: 0;
+    z-index: 0;
+}
+.separator img{
+    width: 100%;
+
+}
+ 
+
+
+
+// How can we find (2nd SECTION)
+
+#services{
+    padding: 250px 0 50px 0;
+    place-content: center;
+    place-items: center;
+
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.services-img{
+    width: 150px;
+    margin-top: 20px;
+}
+
+.services{
+    border: 2px solid $light;
+    background: $white;
+    border-radius: 10px;
+}
+
+
+
+
+// We care (3rd SECTION)
+
+#we-care{
+    margin: 150px 0;
+}
+.cat-img{
+    width: 90%;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.par{
+    padding-right: 80px;
+}
+
+.par2{
+    font-weight: 400;
+}
+
+.big-btn{
+    width: 160px;
+    padding: 10px 15px;
+    border-radius: 70px;
+    outline: none;
+    background: linear-gradient(90deg, $dark 28.84%, $light 65.18%);
+    border:1px solid $black;
+    font-size: larger;
+    font-weight: 600;
+    color: $dimly;
+    position: relative;
+    border:1px solid black;
+}
+
+
+
+
+// we-need (4th SECTION)
+
+#we-need{
+    margin-top: 150px;
+}
+.card-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 70px;
+}
+
+.card-holder  div{
+    width: 220px;
+    background-color: #F2F2F2;
+    justify-content:center;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.card-icon h1{
+    font-weight: 800;
+}
+
+.dogicon{
+    position: absolute;
+    top: -50%;
+    right: 57%;
+}
+
+
+
+
+// Testimonials (5th SECTION)
+
+#testimonials{
+    margin: -50px 0 100px 0;
+}
+
+.testitext{
+    margin-bottom: 40px;
+}
+.para{
+    margin-top: -10px;
+}
+.testi{
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    width: 1000px;
+    height: 300px;
+    margin: auto;
+    background: #f2f2f2;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px $light,
+    inset 0px 4px 4px rgba(242, 213, 65, 0.25);
+}
+
+
+
+
+// Our Team (6th SECTION)
+
+#our-team{
+    margin-top: 220px;
+}
+
+
+.team img{
+    width: 350px;
+    margin: 0 5px;
+}
+
+.nametags{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.nametags div{
+    width: 200px; 
+    position: relative;
+    bottom: 30px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    box-shadow: 0px 4px 4px $light;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+
+
+
+// Why Pets  (7th SECTION)
+
+#whypets{
+    margin: 100px 0;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background: linear-gradient(360deg, $dark 10.84%, $light 65.18%);
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.divider{
+    position: absolute;
+    bottom: 450px;
+    z-index: 0;
+    width: 100%;
+}
+
+.why{
+    color: #ffffff;
+
+}
+
+.whybtn{
+    width: 160px;
+    padding: 10px 15px;
+    border-radius: 70px;
+    outline: none;
+    background: $light;
+    border:1px solid $dimly;
+    font-size: larger;
+    font-weight: 600;
+    color: $dimly;
+    position: relative;
+}
+
+.why h1{
+    font-size: 3.2rem;
+    font-weight: 750;
+    color: $white;
+    letter-spacing: 3px;
+}
+
+.dpets{
+    width: 90vw;
+    height: auto;
+    position: absolute;
+    top: 70%;
+    z-index: 1;
+}
+
+
+.register{
+    width: 100px;
+    padding: 2px 15px;
+    border-radius: 70px;
+    outline: none;
+    background: $light;
+    border:1px solid black;
+    font-weight: 600;
+    color: $dimly;
+    position: relative;
+    right: 100px;
+}
+
+.loginbtn2{
+    width: 100px;
+    padding: 2px 15px;
+    border-radius: 70px;
+    outline: none;
+    background: $dark;
+    border:1px solid black;
+    font-weight: 600;
+    color: $dimly;
+    position: relative;
+    right: 100px;
+}
+
+
+// Footer (8th SECTION)
+// Upper
+
+.footer-upper{
+    margin: 200px 0 30px 0;
+}
+
+.footerrow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerimg{
+    width: 75%;
+    position: relative;
+    border-radius: 20px;
+    right: 0px;
+}
+
+.footer-content div{
+    margin: 0 10px 0 10px;
+    position: relative;
+    left: 60px;
+}
+.footer-content div h6{
+    font-weight: 700;
+}
+.footer-content div a{
+    text-decoration: none;
+    color: gray;
+    transition: 0.2s ease-in-out;
+}
+.footer-content div a:hover{
+    font-weight: 700;
+    
+}
+
+
+.footerbutton{
+    position: relative;
+    left: 70px;
+}
+.footerbutton div{
+    margin: 10px 0;
+}
+
+
+
+// Lower
+
+.breakline{
+    position: relative;;
+    width: 100%;
+    height: 1px;
+    left: 0px;
+    top: 50%;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.socialm{
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.socialm div{
+    margin-top: 20px;
+    align-items: center;
+}
+
+.breakline div img{
+    width: 40px;
+    border-radius: 5px;
+    margin: 5px;
+
+}
+
+.copyright{
+    position: relative;
+    right: 60px;
+}
+.follow{
+    position: relative;
+    left: 250px;
+}
+.sicon{
+    position: relative;
+    bottom: 10px;
+    left: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+
+
+}
