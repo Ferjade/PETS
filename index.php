@@ -21,6 +21,8 @@
 </head>
 
 <body>
+
+    <!-- ORIGINAL NAVBAR -->
     <!-- NAV BAR -->
     <nav class="container-fluid sticky-top">
         <!-- LOGO -->
@@ -90,7 +92,8 @@
         <div class="container text-center bold">
 
             <h1 class="bold">How can we find your pets?</h1>
-            <p class="ms-5 me-5 par2">We are not a government agency that picks up strays. Due to very limited space at
+            <p class="ms-5 me-5 par2">We are not a government agency that picks up strays. Due to very limited space
+                at
                 the
                 shelter, <br>
                 admission
@@ -110,7 +113,8 @@
                 <div class="col-md-3 services ms-5 me-4 p-4">
                     <img src="./images/carddog2.png" class="services-img" alt="">
                     <h4 class="bold">Community search</h4>
-                    <p class="par2">Check your city pound immediately. If your pet was loose on the streets, he/she may
+                    <p class="par2">Check your city pound immediately. If your pet was loose on the streets, he/she
+                        may
                         have been
                         picked up by authorized catchers.</p>
                 </div>
@@ -118,7 +122,8 @@
                 <div class="col-md-3 services ms-5 p-4">
                     <img src="./images/carddog3.png" class="services-img" alt="">
                     <h4 class="bold">Fostering found pets</h4>
-                    <p class="par2">People are encouraged to foster the lost pet or find someone to foster it, in order
+                    <p class="par2">People are encouraged to foster the lost pet or find someone to foster it, in
+                        order
                         to
                         give the
                         owner a chance to make contact.</p>
@@ -175,7 +180,8 @@
                 <div class="col-md-5 mt-5 ms-5">
 
                     <h1 class="title">We need you to <br><b>Find us</b></h1> <br>
-                    <p class="par">PETS (PETS Emergency Tracking site) is a temporary shelter for dogs, cats and other
+                    <p class="par">PETS (PETS Emergency Tracking site) is a temporary shelter for dogs, cats and
+                        other
                         animals
                         rescued from cruelty or neglect with the goal of rehabilitating and placing them in loving
                         homes.
@@ -239,7 +245,8 @@
                 <div class="col-sm-7">
                     <h4 class="bold">Jhon Walker</h4>
                     <p class="fordogs">Owner of 4 dogs</p>
-                    <p> "Dogs have a way of fingdingg the people who need them and filling and emptiness we didn't ever
+                    <p> "Dogs have a way of fingdingg the people who need them and filling and emptiness we didn't
+                        ever
                         know we had, dog is the most faithful of animals and would be much esteemed were it not so
                         common. Our Lord God has made his greatest gift the commonest"
                     </p>
@@ -259,7 +266,8 @@
 
                 <h1 class="bold">Our Team</h1>
                 <p class="ms-5 me-5 par2 para">
-                    Our main work is to educate and disseminate information concerning animal welfare, <br> animal care,
+                    Our main work is to educate and disseminate information concerning animal welfare, <br> animal
+                    care,
                     animal control, and other animal-related concerns.
                 </p> <br>
 
@@ -425,10 +433,10 @@
                         </div>
 
                         <div class="col-md-4 sicon">
-                            <img src="./images/socialicon1.png" alt="">
-                            <img src="./images/socialicon2.png" alt="">
-                            <img src="./images/socialicon3.png" alt="">
-                            <img src="./images/socialicon4.png" alt="">
+                            <a href=""><img class="social1" src="./images/socialicon1.png" alt=""></a>
+                            <a href=""><img class="social2" src="./images/socialicon2.png" alt=""></a>
+                            <a href=""><img class="social3" src="./images/socialicon3.png" alt=""></a>
+                            <a href=""><img class="social4" src="./images/socialicon4.png" alt=""></a>
                         </div>
 
                     </div>

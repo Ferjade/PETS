@@ -7,7 +7,7 @@ $white: #ffffff;
 $black: #0000;
 
 
-body{
+body{    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,11 +16,7 @@ body{
     scroll-behavior: smooth;
 }
 
-// body{
-//     scroll-snap-type: y mandatory;
-//     overflow-y: scroll;
-//     height: 100vh;
-// }
+
 
 
 
@@ -35,7 +31,6 @@ nav{
     top: 0;
     width: 100%;
     height: 70px;
-    z-index: 1;
     margin: 0;
     padding: 0;
 }
@@ -79,7 +74,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    // background-color: $light;
+    background-color: $light;
     color: $brightly;
     box-shadow: 5px 10px 30px rgba(252, 59, 0, 0.397);
     border: 1px solid $white;
@@ -129,11 +124,26 @@ nav form button:hover{
     outline: none;
     background: $light;
     border:1px solid $white;
+    font-size: 1rem;
     font-weight: 600;
     color: $dimly;
     position: relative;
     right: 100px;
     z-index: 2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: .3s ease-in-out;
+}
+.loginbtn:hover{
+    color: $light;
+    background: $brightly;
+    scale: 1.1;
+    font-weight: 800;
+}
+
+// Navbar queries
+@media screen and (max-width: 750px) {
+
+    
 }
 
 
@@ -143,7 +153,7 @@ nav form button:hover{
     width: 100%;
     height: 75vh;
     position: relative;
-    background: linear-gradient(360deg, $dark 28.84%, $light 65.18%);
+    background: linear-gradient(360deg, $dark 30%, $light 70%);
     border-radius: 0px;
     display: flex;
     align-items: center;
@@ -166,6 +176,7 @@ nav form button:hover{
     font-weight: 600;
     color: $white;
     letter-spacing: 3px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 
@@ -180,6 +191,14 @@ nav form button:hover{
     font-weight: 600;
     color: $dimly;
     position: relative;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: .3s ease-in-out;
+}
+.main a button:hover{
+    color: $light;
+    background: $brightly;
+    scale: 1.1;
+    font-weight: 800;
 }
 
 // Main Image
@@ -210,9 +229,8 @@ nav form button:hover{
 
 #services{
     padding: 250px 0 50px 0;
-    place-content: center;
-    place-items: center;
-
+    align-items: center;
+    justify-content: center;
 }
 
 .bold{
@@ -221,15 +239,20 @@ nav form button:hover{
 
 .services-img{
     width: 150px;
-    margin-top: 20px;
+    margin-top: 10px;
+    transition: .2s ease-in-out;
 }
 
 .services{
     border: 2px solid $light;
     background: $white;
     border-radius: 10px;
+    transition: .3s ease-in-out;
 }
-
+.services:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+    transform: translateY(-8px);
+}
 
 
 
@@ -267,8 +290,17 @@ nav form button:hover{
     color: $dimly;
     position: relative;
     border:1px solid black;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.3s ease-in-out;
 }
-
+.big-btn:hover{
+    background: linear-gradient(90deg, $light 28.84%, $dark 65.18%);
+    font-size: larger;
+    scale: 1.1;
+    color: $brightly;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-weight: 800;
+}
 
 
 
@@ -292,6 +324,12 @@ nav form button:hover{
     margin: 15px;
     padding: 10px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: .3s ease-in-out;
+}
+.card-holder div:hover{
+    background-color: $dark;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+    transform: translateY(-8px);
 }
 
 .card-icon h1{
@@ -323,7 +361,7 @@ nav form button:hover{
     display: flex;
     align-items: center;
     justify-content: center;;
-    width: 1000px;
+    width: 90%;
     height: 300px;
     margin: auto;
     background: #f2f2f2;
@@ -343,8 +381,9 @@ nav form button:hover{
 
 
 .team img{
-    width: 350px;
+    width: 21rem;
     margin: 0 5px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .nametags{
@@ -405,6 +444,14 @@ nav form button:hover{
     font-weight: 600;
     color: $dimly;
     position: relative;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: .3s ease-in-out;
+}
+.whybtn:hover{
+    color: $brightly;
+    background: $light;
+    scale: 1.1;
+    font-weight: 800;
 }
 
 .why h1{
@@ -429,11 +476,21 @@ nav form button:hover{
     border-radius: 70px;
     outline: none;
     background: $light;
-    border:1px solid black;
+    border:1px solid black;;
+    font-size: 1rem;
     font-weight: 600;
     color: $dimly;
     position: relative;
     right: 100px;
+    z-index: 2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: .3s ease-in-out;
+}
+.register:hover{
+    color: $brightly;
+    background: $dark;
+    scale: 1.1;
+    font-weight: 800;
 }
 
 .loginbtn2{
@@ -442,11 +499,21 @@ nav form button:hover{
     border-radius: 70px;
     outline: none;
     background: $dark;
-    border:1px solid black;
+    border:1px solid black;;
+    font-size: 1rem;
     font-weight: 600;
     color: $dimly;
     position: relative;
     right: 100px;
+    z-index: 2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: .3s ease-in-out;
+}
+.loginbtn2:hover{
+    color: $brightly;
+    background: $light;
+    scale: 1.1;
+    font-weight: 800;
 }
 
 
@@ -522,6 +589,13 @@ nav form button:hover{
     margin-top: 20px;
     align-items: center;
 }
+.socialm div a img{
+    transition: transform 1s ease-in-out;;
+}
+.socialm div a img:hover{
+    transform: rotate(360deg) translateZ(0);
+}
+
 
 .breakline div img{
     width: 40px;
@@ -529,6 +603,7 @@ nav form button:hover{
     margin: 5px;
 
 }
+
 
 .copyright{
     position: relative;
@@ -544,7 +619,7 @@ nav form button:hover{
     left: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
 
 
 
