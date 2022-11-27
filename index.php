@@ -50,7 +50,7 @@
         <!------------ FOR BACK END ------------>
         <!-- BUTTON (LOGIN)  -->
         <div>
-            <a href="#">
+            <a href="login.php">
                 <button class="loginbtn">
                     Log in
                 </button>
@@ -392,7 +392,7 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (REGISTER)  -->
                     <div>
-                        <a href="#">
+                        <a href="registration.php">
                             <button class="register">
                                 Register
                             </button>
@@ -402,7 +402,7 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (LOGIN)  -->
                     <div>
-                        <a href="#">
+                        <a href="login.php">
                             <button class="loginbtn2">
                                 Log in
                             </button>
