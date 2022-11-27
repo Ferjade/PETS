@@ -1,0 +1,14 @@
+@import url(style.css);
+
+.container-form{
+    border: 2px solid;
+    border-radius: 15px;
+    margin: 10rem auto 0 auto;
+    width: 80%;
+}
+img{
+    width: 150%;
+}
+.input{
+    padding: 0.5rem;
+}

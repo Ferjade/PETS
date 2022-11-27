@@ -32,9 +32,9 @@
         <!------------ FOR BACK END ------------>
         <!-- Page navigation link -->
         <ul>
-            <li><a href="#" class="active">Home</a></li>
+            <li><a href="index.php" class="active">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
             <li><a href="#">Forums</a></li>
         </ul>
 
@@ -50,7 +50,7 @@
         <!------------ FOR BACK END ------------>
         <!-- BUTTON (LOGIN)  -->
         <div>
-            <a href="#">
+            <a href="login.php">
                 <button class="loginbtn">
                     Log in
                 </button>
@@ -381,7 +381,7 @@
                     <div class="col-md-3 text-start">
                         <h6>Company</h6>
                         <a href="#">About us</a> <br>
-                        <a href="#">Contact us</a> <br>
+                        <a href="contact.php">Contact us</a> <br>
                         <a href="#">History</a> <br>
                     </div>
 
@@ -392,7 +392,7 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (REGISTER)  -->
                     <div>
-                        <a href="#">
+                        <a href="registration.php">
                             <button class="register">
                                 Register
                             </button>
@@ -402,7 +402,7 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (LOGIN)  -->
                     <div>
-                        <a href="#">
+                        <a href="login.php">
                             <button class="loginbtn2">
                                 Log in
                             </button>
