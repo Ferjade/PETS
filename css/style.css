@@ -121,7 +121,8 @@ nav form button:hover {
   height: 75vh;
   position: relative;
   background: linear-gradient(360deg, #ff862f 30%, #fbbe28 70%);
-  border-radius: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,6 +176,8 @@ nav form button:hover {
   top: 82px;
   right: 115px;
   z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .separator {
@@ -198,6 +201,15 @@ nav form button:hover {
 
 .bold {
   font-weight: 700;
+  z-index: 1;
+}
+
+.offer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .services-img {
@@ -319,6 +331,7 @@ nav form button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   width: 90%;
   height: 300px;
   margin: auto;
@@ -564,4 +577,16 @@ nav form button:hover {
   position: relative;
   bottom: 10px;
   left: 50px;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.current {
+  transform: translateY(0px);
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
