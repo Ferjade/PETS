@@ -433,10 +433,10 @@
                         </div>
 
                         <div class="col-md-4 sicon">
-                            <a href=""><img class="social1" src="./images/socialicon1.png" alt=""></a>
-                            <a href=""><img class="social2" src="./images/socialicon2.png" alt=""></a>
-                            <a href=""><img class="social3" src="./images/socialicon3.png" alt=""></a>
-                            <a href=""><img class="social4" src="./images/socialicon4.png" alt=""></a>
+                            <a href="#"><img src="./images/socialicon1.png" alt="Facebook logo"></a>
+                            <a href="#"><img src="./images/socialicon2.png" alt="Instagram logo"></a>
+                            <a href="#"><img src="./images/socialicon3.png" alt="Linkedin logo"></a>
+                            <a href="#"><img src="./images/socialicon4.png" alt="Tiktok log"></a>
                         </div>
 
                     </div>

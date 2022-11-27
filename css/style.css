@@ -139,7 +139,7 @@ nav form button:hover {
 }
 
 .main > .maintext h1 {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   font-weight: 600;
   color: #ffffff;
   letter-spacing: 3px;
@@ -170,6 +170,7 @@ nav form button:hover {
 
 .main div img {
   width: 800px;
+  height: auto;
   position: relative;
   top: 82px;
   right: 115px;
@@ -192,6 +193,7 @@ nav form button:hover {
   padding: 250px 0 50px 0;
   align-items: center;
   justify-content: center;
+  margin-inline: auto;
 }
 
 .bold {
@@ -288,6 +290,7 @@ nav form button:hover {
   background-color: #ff862f;
   filter: drop-shadow(0px 4px 4px rgb(0, 0, 0));
   transform: translateY(-8px);
+  color: white;
 }
 
 .card-icon h1 {
@@ -331,7 +334,12 @@ nav form button:hover {
 .team img {
   width: 21rem;
   margin: 0 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.team img:hover {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transform: scale(1.1);
 }
 
 .nametags {
@@ -367,7 +375,7 @@ nav form button:hover {
 .divider {
   position: absolute;
   bottom: 450px;
-  z-index: 0;
+  z-index: 1;
   width: 100%;
 }
 
@@ -391,8 +399,8 @@ nav form button:hover {
 }
 
 .whybtn:hover {
-  color: #ff1e00;
-  background: #fbbe28;
+  color: #fbbe28;
+  background: #ff1e00;
   scale: 1.1;
   font-weight: 800;
 }
