@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+/* NavBar */
+nav{
+    background-color: #ff862f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* LOGO */
+.logo{
+    width: 165px;
+    position: relative;
+    left: 60px;
+    border-radius: 10px;
+}
+
+
+
+/* Nav List */
+nav ul{
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    left: 5%;
+    padding: 0;
+}
+
+nav ul li a{
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+    height: 40px;
+    margin: 3px;
+    padding: 0 20px;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+    color: #ffffff;
+}
+
+nav ul li a:hover{
+    background-color: #ffffff;
+    color: #ff1e00;
+    box-shadow: 5px 10px 30px rgba(252, 59, 0, 0.397);
+    border: 1px solid #ffffff;
+}
+
+.active{
+    background-color: #fbbe28;
+    color: #ff1e00;
+    box-shadow: 5px 10px 30px rgba(252, 59, 0, 0.397);
+    border: 1px solid #ffffff;
+} 
+
+
+
+/* Search box */
+.search-bar{
+    background: #ffffff;
+    border-radius: 50px;
+    outline: none;
+}
+
+nav form button{
+    background: transparent;
+    border: none;
+}
+
+.search-area{
+    width: 100px;
+    padding: 3px 10px;
+    border-radius: 50px;
+    outline: none;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    color: gray;
+}
+
+
+nav form button:hover{
+    color: #fbbe28;
+}
+
+.loginbtn{
+    width: 100px;
+    padding: 2px 15px;
+    border-radius: 70px;
+    outline: none;
+    background: #fbbe28;
+    border:1px solid #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e8f9fd;
+    position: relative;
+    right: 100px;
+    z-index: 2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: .3s ease-in-out;
+}
+.loginbtn:hover{
+    color: #fbbe28;
+    background: #ff1e00;
+    ;
+    scale: 1.1;
+    font-weight: 800;
+}
+
+/* Navbar queries */
+@media screen and (max-width: 750px) {
+
+    
+}
+
+/* Main */
+.card{
+    width: 90%;
+    height: 90vh;
+    margin-top: 9vh;
+    margin-bottom: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 25px;
+}
+.card-body{
+    width: 100%;
+    height: 100%;
+    display:flex
+}
+.left-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.right-container{
+    width: 100%;
+    height: 100%;
+    background-color: #ff862f;
+    border-radius: 25px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+#addPetBtn{
+    width: 8vw;
+}
+.left-container-header{
+    margin-top: 3vh;
+}
+.right-container-header{
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.circle{
+    margin-top: 4vh;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+.profile-image{
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/defaultPFP.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.rectangle{
+    width: 80%;
+    height: 10%;
+    background-color: grey;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nameRetrieved{
+    color: white;
+    margin-left: 1vw;
+}
+.emailRetrieved{
+    color: white;
+    margin-left: 1vw;
+}
+.locationRetrieved{
+    color: white;
+    margin-left: 1vw;
+}
