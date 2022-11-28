@@ -33,9 +33,9 @@
         <!-- Page navigation link -->
         <ul>
             <li><a href="index.php" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="#">Forums</a></li>
+            <li><a href="forums.php">Forums</a></li>
         </ul>
 
         <!------------ FOR BACK END ------------>

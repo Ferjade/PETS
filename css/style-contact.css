@@ -1,14 +1,18 @@
 @import url(style.css);
 
 .container-form{
-    border: 2px solid;
     border-radius: 15px;
-    margin: 10rem auto 0 auto;
+    margin: 5rem auto 0 auto;
     width: 80%;
 }
-img{
+.contact-img{
     width: 150%;
+    padding-top: 3rem;
 }
 .input{
     padding: 0.5rem;
+}
+.form-box{
+    background-color: #ff862f;
+    border-radius: 15px;
 }
