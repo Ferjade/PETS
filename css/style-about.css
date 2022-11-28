@@ -1,0 +1,30 @@
+@import url(style.css);
+
+
+.about-container{
+    background: url(../images/aobutbg.jpg);
+    color: white;
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-size: 80%; */
+    object-fit: cover;
+}
+
+.about-container h1{
+    font-size: 6rem;
+    font-weight: 800;
+    z-index: 1;
+    position: relative;
+    bottom: 2rem;
+}
+
+.color-overlay{
+    background: linear-gradient(to top, #ff862f 30%, #fbbe28 60%);
+    width: 100%;
+    height: 75vh;
+    opacity: 0.5;
+    position: absolute;
+}

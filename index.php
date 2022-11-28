@@ -33,7 +33,7 @@
         <!-- Page navigation link -->
         <ul>
             <li><a href="index.php" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="contact.php">Contact</a></li>
             <li><a href="#">Forums</a></li>
         </ul>
@@ -142,7 +142,7 @@
             <div class="row mt-5">
 
                 <div class="col-md-6 center">
-                    <img class="reveal" src="./images/puzzycat2.png" class="cat-img" alt="">
+                    <img src="./images/puzzycat2.png" class="cat-img reveal" alt="">
                 </div>
 
                 <div class="col-md-6 mt-5">
