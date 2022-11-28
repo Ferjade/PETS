@@ -69,6 +69,7 @@
         <img src="./images/deviders.png" alt="">
     </div>
 
+
     <!-- 2nd section -->
 
     <section id="we-care">
@@ -76,32 +77,96 @@
             <div class="row mt-5">
 
                 <div class="col-md-6 center">
-                    <img src="./images/puzzycat2.png" class="cat-img reveal" alt="">
+                    <img src="./images/team.jpg" class="cat-img reveal boxdesign parallax" alt="">
                 </div>
 
-                <div class="col-md-6 mt-5">
+                <div class="col-md-6 mt-5 details">
 
-                    <h1 class="title">We are a volunteer-based <br><b>organization.</b></h1> <br>
+                    <h1 class=" title">We are a volunteer-based <br><b>organization.</b></h1> <br>
                     <p class="par">Our main work is to educate and disseminate information concerning animal welfare,
                         animal care, animal control, and other animal-related concerns. <br>
 
-                        PAWS campaigns actively against animal cruelty and pet neglect, including activities like
+                        PETS campaigns actively against animal cruelty and pet neglect, including activities like
                         dogfights, horsefights, and wild animals being used for entertainment.
                     </p> <br>
-
-
-                    <!------------ FOR BACK END ------------>
-                    <!-- BUTTON (LOGIN)  -->
-                    <!-- <a href="#">
-                        <button class="big-btn">
-                            Log in
-                        </button>
-                    </a> -->
 
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- 3rd Section -->
+
+    <section id="we-need">
+        <div class="container mt-5">
+            <div class="row mt-5">
+
+                <div class="col-md-5 mt-5 ms-5">
+
+                    <h1 class="title">PETS <br><b>Volunteer</b></h1> <br>
+                    <p class="par">PETS (PETS Emergency Tracking site) is a temporary shelter for dogs, cats and
+                        As a PAWS Volunteer, you will get assigned a variety of tasks.
+                        Every little task, from dog walking to kennel cleaning, makes a huge impact in the lives of the
+                        animals at the shelter. There are over 300 animals that need care, and only a handful of
+                        caretakers. Office staff attend to dozens of visitors and phone calls, so volunteers that help
+                        out are truly appreciated. Other tasks you can help with include assisting in events and doing
+                        ocular inspections for prospective adopters.
+                    </p> <br>
+
+                </div>
+
+                <div class="col-md-5 card-holder reveal">
+
+                    <img src="./images/teamhands.jpg" class="boxdesign hands" alt="">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 4th section -->
+
+    <section id="we-care">
+        <div class="container mt-5">
+            <div class="row mt-5">
+
+                <div class="col-md-6 center">
+                    <iframe class="reveal"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30883.258019134566!2d121.044095315625!3d14.63280880000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b784329550fd%3A0x55bbd6106c1c6ffb!2sPAWS%20Animal%20Rehabilitation%20Center!5e0!3m2!1sen!2sph!4v1669663093584!5m2!1sen!2sph"
+                        width="550" height="500" style="border-radius: 10px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="col-md-6 mt-5 details">
+
+                    <h1 class=" title">How you can<br><b>help</b></h1> <br>
+                    <p class="par">OThe shelter and all our programs and campaigns are funded solely by donations. You
+                        can donate any amount via bank deposit or Paypal transfer.
+
+                        Bank of the Philippine Islands (Swift no. BOPIPHMM)
+                        Acct Name: The Philippine Animal Welfare Society, Inc.
+                        USD Acct No. 3944-0021-61
+                        PHP Acct No. 3943-0086-11
+                        <br><br>
+                        Philippine National Bank (Swift no. PNBM PHMM)
+                        Acct Name: The Philippine Animal Welfare Society, Inc.
+                        Acct No. 1888-70015305
+                        <br><br>
+                        BDO Savings
+                        Acct Name : The Philippine Animal Welfare Society, Inc.
+                        Acct No : 0036-4007-0350
+                        <br><br>
+                        Checks should be issued to Pet Emergency Tracking Site (PETS)
+                    </p> <br>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 
 
