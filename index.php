@@ -35,7 +35,7 @@
             <li><a href="index.php" class="active">Home</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="#">Forums</a></li>
+            <li><a href="forums.php">Forums</a></li>
         </ul>
 
         <!------------ FOR BACK END ------------>
@@ -66,7 +66,7 @@
             <h1>Helping <b>YOU</b> </br>find your <b>PETS</b> </h1>
             <h5>Finding our beloved pets has never <br> been this easy</h5>
             <br>
-            <a href="#">
+            <a href="login.php">
                 <button class="mainbtn">
                     Log in
                 </button>

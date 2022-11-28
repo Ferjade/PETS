@@ -62,28 +62,37 @@
     <div class="container-form">
         <div class="row">
             <div class="col-md-5">
-                <img src="images/HeroIMG1.png" alt="">
+                <img src="images/HeroIMG1.png" class="contact-img" alt="">
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-5">
-                    <div class="row" style="padding: 2rem;">
-                        <h2 style="text-align: center;">Contact Us</h2>
+                <div class="row form-box" style="padding: 2rem;">
+                    <h2 style="text-align: center; color: white;">Contact Us</h2>
+                    <form class="row g-6" action="/createContact.php" method="POST">
                         <div class="col input">
                             <input type="text" class="form-control" placeholder="First name" 
-                            name="first_name" id="first_name">
+                            name="first_name" id="first_name" required>
                         </div>
                         <div class="col input">
-                            <input type="text" class="form-control" placeholder="Last name" name="last_name" id="last_name">
+                            <input type="text" class="form-control" placeholder="Last name" 
+                            name="last_name" id="last_name" required>
                         </div> <br/>
                         <div class="col-md-12 input">
-                            <input type="text" class="form-control" placeholder="Subject" name="subject" id="subject">
+                            <input type="text" class="form-control" placeholder="Contact" 
+                            name="phone" id="phone" required>
                         </div>
                         <div class="col-md-12 input">
-                            <textarea class="form-control" placeholder="Leave a comment here" style="height: 200px"></textarea>
+                            <input type="text" class="form-control" placeholder="Subject" 
+                            name="subject" id="subject" required>
+                        </div>
+                        <div class="col-md-12 input">
+                            <textarea class="form-control" placeholder="Leave your message here"  name="inquiry" id="inquiry"
+                            style="height: 200px" required></textarea>
                         </div>
                         <div class="d-grid gap-2">
-                          <input class="btn btn-warning" style="color: white;" type="submit" value="Submit"></input>
+                          <input class="btn btn-warning" name="submitbtn" style="color: white;" type="submit" value="Submit"></input>
                         </div>
+                    </form>
                 </div>
             </div>
         </div>
