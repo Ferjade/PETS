@@ -66,7 +66,7 @@
             <h1>Helping <b>YOU</b> </br>find your <b>PETS</b> </h1>
             <h5>Finding our beloved pets has never <br> been this easy</h5>
             <br>
-            <a href="#">
+            <a href="login.php">
                 <button class="mainbtn">
                     Log in
                 </button>
