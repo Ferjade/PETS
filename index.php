@@ -27,7 +27,7 @@
     <nav class="container-fluid sticky-top">
         <!-- LOGO -->
         <a href="#">
-            <img src="./images/newlogo.png" class=" logo" alt="P.E.T.S logo">
+            <img src="./images/newlogo.png" class="logo" alt="P.E.T.S logo">
         </a>
         <!------------ FOR BACK END ------------>
         <!-- Page navigation link -->
@@ -74,7 +74,7 @@
         </div>
 
         <div class="mainimg">
-            <img src="./images/HeroIMG1.png" alt="">
+            <img src=" ./images/HeroIMG1.png" alt="">
         </div>
 
     </div>
@@ -89,7 +89,7 @@
 
     <section id="services">
 
-        <div class="container text-center bold">
+        <div class="container text-center">
 
             <h1 class="bold">How can we find your pets?</h1>
             <p class="ms-5 me-5 par2">We are not a government agency that picks up strays. Due to very limited space
@@ -100,28 +100,28 @@
                 is strictly reserved for animals involved in cruelty cases pending in court.
             </p> <br>
 
-            <div class="row text-center">
+            <div class="row text-center offer reveal">
 
-                <div class="col-md-3 services me-4 ms-5 p-4">
+                <div class="col-lg-3 services mx-4 py-4 px-2">
                     <img src="./images/carddog1.png" class="services-img" alt="">
-                    <h4 class="bold">Social media announcement</h4>
+                    <h4 class="bold">Social media <br> announcement</h4>
                     <p class="par2">To post your lost pet in the PAWS Facebook page, kindly email their photo to
                         pets.com
                         with the subject line LOST PET.</p>
                 </div>
 
-                <div class="col-md-3 services ms-5 me-4 p-4">
+                <div class="col-lg-3 services mx-4 py-4 px-2">
                     <img src="./images/carddog2.png" class="services-img" alt="">
-                    <h4 class="bold">Community search</h4>
+                    <h4 class="bold">Community <br> search</h4>
                     <p class="par2">Check your city pound immediately. If your pet was loose on the streets, he/she
                         may
                         have been
                         picked up by authorized catchers.</p>
                 </div>
 
-                <div class="col-md-3 services ms-5 p-4">
+                <div class="col-lg-3 services mx-4 py-4 px-2">
                     <img src="./images/carddog3.png" class="services-img" alt="">
-                    <h4 class="bold">Fostering found pets</h4>
+                    <h4 class="bold">Fostering <br> found pets</h4>
                     <p class="par2">People are encouraged to foster the lost pet or find someone to foster it, in
                         order
                         to
@@ -142,13 +142,14 @@
             <div class="row mt-5">
 
                 <div class="col-md-6 center">
-                    <img src="./images/puzzycat2.png" class="cat-img" alt="">
+                    <img class="reveal" src="./images/puzzycat2.png" class="cat-img" alt="">
                 </div>
 
                 <div class="col-md-6 mt-5">
 
                     <h1 class="title">We care your pet <br><b>As you care</b></h1> <br>
-                    <p class="par">PETS is a credible nationwide non-profit organization, composed of a network of
+                    <p class="par">PETS is a credible nationwide non-profit organization, composed of a network
+                        of
                         committed,
                         compassionate and trustworthy individuals and institutions that initiates and leads in the
                         promotion of animal welfare, and the protection of all animals. PETS envisions a nation that
@@ -198,7 +199,7 @@
 
                 </div>
 
-                <div class="col-md-5 card-holder">
+                <div class="col-md-5 card-holder reveal">
 
                     <div class="card card-icon">
                         <img src="./images/caticon.png" alt="">
@@ -236,13 +237,13 @@
                 </p>
             </div>
 
-            <div class="testi">
+            <div class="testi reveal">
 
-                <div class="col-sm-3">
+                <div class="col-md-3">
                     <img src="./images/petlover.png" alt="">
                 </div>
 
-                <div class="col-sm-7">
+                <div class="col-md-7">
                     <h4 class="bold">Jhon Walker</h4>
                     <p class="fordogs">Owner of 4 dogs</p>
                     <p> "Dogs have a way of fingdingg the people who need them and filling and emptiness we didn't
@@ -273,7 +274,7 @@
 
             </div>
 
-            <div class="text-center team row">
+            <div class="text-center team row reveal">
 
                 <div class="col-md-4">
 
@@ -323,9 +324,10 @@
     <section id="whypets">
 
         <img src="./images/Ellipse1.png" class="divider" alt="">
+
         <div class="container">
 
-            <div class="text-center why">
+            <div class="text-center why reveal">
 
                 <h1 class="bold">Why go with PETS? </h1> <br>
                 <p class="ms-5 me-5 par2 para">
@@ -337,7 +339,7 @@
 
                 <!------------ FOR BACK END ------------>
                 <!-- BUTTON (LOGIN)  -->
-                <a href="#">
+                <a href="login.php">
                     <button class="whybtn">
                         Log in
                     </button>
@@ -353,7 +355,7 @@
     <!-- Footer (8th SECTION) -->
     <!-- Upper Footer -->
     <footer class="footer-upper">
-        <div class="container">
+        <div class="container ">
             <div class="row footerrow text-center">
 
                 <div class="col-md-4">
@@ -433,10 +435,10 @@
                         </div>
 
                         <div class="col-md-4 sicon">
-                            <a href=""><img class="social1" src="./images/socialicon1.png" alt=""></a>
-                            <a href=""><img class="social2" src="./images/socialicon2.png" alt=""></a>
-                            <a href=""><img class="social3" src="./images/socialicon3.png" alt=""></a>
-                            <a href=""><img class="social4" src="./images/socialicon4.png" alt=""></a>
+                            <a href="#"><img src="./images/socialicon1.png" alt="Facebook logo"></a>
+                            <a href="#"><img src="./images/socialicon2.png" alt="Instagram logo"></a>
+                            <a href="#"><img src="./images/socialicon3.png" alt="Linkedin logo"></a>
+                            <a href="#"><img src="./images/socialicon4.png" alt="Tiktok log"></a>
                         </div>
 
                     </div>
@@ -445,6 +447,33 @@
             </div>
         </div>
     </footer>
+
+
+
+
+
+
+    <script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+
+    function reveal() {
+        const reveals = document.querySelectorAll('.reveal');
+
+        for (let i = 0; i < reveals.length; i++) {
+
+            const windowheight = window.innerHeight;
+            const revealtop = reveals[i].getBoundingClientRect().top;
+            const revealpoint = 100;
+
+            if (revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add('current');
+            } else {
+                reveals[i].classList.remove('current');
+            }
+        }
+    }
+    </script>
+
 
 
 </body>

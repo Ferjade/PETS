@@ -154,7 +154,8 @@ nav form button:hover{
     height: 75vh;
     position: relative;
     background: linear-gradient(360deg, $dark 30%, $light 70%);
-    border-radius: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,7 +173,7 @@ nav form button:hover{
     letter-spacing: 3px;
 }
 .main > .maintext h1{
-    font-size: 3.2rem;
+    font-size: clamp(1rem, 3.5rem + .5rem, 3.5rem);
     font-weight: 600;
     color: $white;
     letter-spacing: 3px;
@@ -204,15 +205,17 @@ nav form button:hover{
 // Main Image
 .main div img{
     width: 800px;
+    height: auto;
     position: relative;
     top: 82px;
     right: 115px;
     z-index: 2;
+    object-fit: cover;
 }
 
 .separator{
     width: 100%;     
-    position: absolute;;
+    position: absolute;
     top: 490px;
     left: 0;
     z-index: 0;
@@ -231,10 +234,20 @@ nav form button:hover{
     padding: 250px 0 50px 0;
     align-items: center;
     justify-content: center;
+    margin-inline: auto;
 }
 
 .bold{
     font-weight: 700;
+    z-index: 1;
+}
+
+.offer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 .services-img{
@@ -330,6 +343,7 @@ nav form button:hover{
     background-color: $dark;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
     transform: translateY(-8px);
+    color: white;
 }
 
 .card-icon h1{
@@ -360,7 +374,8 @@ nav form button:hover{
 .testi{
     display: flex;
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
+    flex-direction: row;
     width: 90%;
     height: 300px;
     margin: auto;
@@ -383,7 +398,11 @@ nav form button:hover{
 .team img{
     width: 21rem;
     margin: 0 5px;
+    transition: .3s ease-in-out;
+}
+.team img:hover{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: scale(1.1);
 }
 
 .nametags{
@@ -424,13 +443,12 @@ nav form button:hover{
 .divider{
     position: absolute;
     bottom: 450px;
-    z-index: 0;
+    z-index: 1;
     width: 100%;
 }
 
 .why{
     color: #ffffff;
-
 }
 
 .whybtn{
@@ -448,8 +466,8 @@ nav form button:hover{
     transition: .3s ease-in-out;
 }
 .whybtn:hover{
-    color: $brightly;
-    background: $light;
+    color: $light;
+    background: $brightly;
     scale: 1.1;
     font-weight: 800;
 }
@@ -618,6 +636,27 @@ nav form button:hover{
     bottom: 10px;
     left: 50px;
 }
+
+
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.current{
+    transform: translateY(0px);
+    opacity: 1;
+    // background: transparent;
+    // background-color: none;
+    // color: black;
+    // box-shadow: none;
+    // border: none;
+}
+
+
+
+
 
 @media screen and (max-width: 750px) {
 
