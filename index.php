@@ -26,7 +26,7 @@
     <!-- NAV BAR -->
     <nav class="container-fluid sticky-top">
         <!-- LOGO -->
-        <a href="#">
+        <a href="index.php">
             <img src="./images/newlogo.png" class="logo" alt="P.E.T.S logo">
         </a>
         <!------------ FOR BACK END ------------>

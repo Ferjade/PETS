@@ -47,8 +47,6 @@
 }
 
 
-
-
 .boxdesign{
     border: 2px solid #ff862f;
     border-radius: 10px;
@@ -58,8 +56,4 @@
 
 .hands{
     width: 120%;
-}
-
-.maps{
-    width: 0;
 }
