@@ -165,7 +165,7 @@
             <div class="row mt-5">
 
                 <div class="col-md-6 center">
-                    <img class="reveal" src="./images/puzzycat2.png" class="cat-img" alt="">
+                    <img src="./images/puzzycat2.png" class="cat-img reveal" alt="">
                 </div>
 
                 <div class="col-md-6 mt-5">
