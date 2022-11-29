@@ -20,9 +20,9 @@
         if($count > 0 && password_verify($pass,$currentPass)){
             $_SESSION['status'] = 'valid';
             $_SESSION['email'] = $email;
-            $_SESSION['user_role'] = $row['user_role'];
-            echo '<script> window.location.href="index.php"</script>';
-            header("location:index.php");
+            $_SESSION['first_name'] = $row['first_name'];
+            echo '<script> window.location.href="profile.php"</script>';
+            header("location:profile.php");
         } else {
             $_SESSION["status"] = "invalid";
             echo '<script> alert("Invalid Credentials!") </script>';
