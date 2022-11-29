@@ -13,7 +13,7 @@
 <body>
     <div class="box">
         <div class="box-content">
-            <img src="images/pets-banner.png" class="image">
+           <a href="index.php"><img src="images/pets-banner.png" class="image"></a> 
             <h3 style="padding: 1rem 1rem 0 1rem;">Login to your account</h3>
             <form class="row g-6" action="authenticate.php" method="POST" name="loginForm" onsubmit="return validation()">
                 <div class="col-md-12 form">

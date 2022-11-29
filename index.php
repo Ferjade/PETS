@@ -1,3 +1,6 @@
+<?php
+    require "authenticate.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,11 +53,25 @@
         <!------------ FOR BACK END ------------>
         <!-- BUTTON (LOGIN)  -->
         <div>
-            <a href="login.php">
-                <button class="loginbtn">
-                    Log in
-                </button>
-            </a>
+        <?php
+            if(!empty($_SESSION["first_name"])){
+                echo "Welcome ". "<a href='profile.php'>".$_SESSION['first_name']."</a>";
+                echo 
+                '
+                <form action="logout.php" method="POST">
+                    <input value="Logout" type="submit" class="loginbtn"></input>
+                </form>';
+                
+            } else {
+                echo 
+                '<a href="login.php">
+                    <button class="loginbtn">
+                        Login
+                    </button>
+                </a>';
+            }
+        ?>
+
         </div>
 
     </nav>
@@ -67,7 +84,13 @@
             <h5>Finding our beloved pets has never <br> been this easy</h5>
             <br>
             <a href="login.php">
-                <button class="mainbtn">
+                <button class="mainbtn"
+                style="<?php 
+                if(!empty($_SESSION["email"])){
+                        echo 'display: none;';
+                    } else {
+                        echo '';
+                    }?>">
                     Log in
                 </button>
             </a>
@@ -142,7 +165,7 @@
             <div class="row mt-5">
 
                 <div class="col-md-6 center">
-                    <img class="reveal" src="./images/puzzycat2.png" class="cat-img" alt="">
+                    <img src="./images/puzzycat2.png" class="cat-img reveal" alt="">
                 </div>
 
                 <div class="col-md-6 mt-5">
@@ -160,7 +183,12 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (LOGIN)  -->
                     <a href="#">
-                        <button class="big-btn">
+                        <button class="big-btn" 
+                        style="<?php if(!empty($_SESSION["email"])){
+                            echo 'display: none;';
+                        } else {
+                            echo '';
+                        }?>">
                             Log in
                         </button>
                     </a>
@@ -192,7 +220,12 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (LOGIN)  -->
                     <a href="#">
-                        <button class="big-btn">
+                        <button class="big-btn"
+                        style="<?php if(!empty($_SESSION["email"])){
+                            echo 'display: none;';
+                        } else {
+                            echo '';
+                        }?>">
                             Register
                         </button>
                     </a>
@@ -339,9 +372,9 @@
 
                 <!------------ FOR BACK END ------------>
                 <!-- BUTTON (LOGIN)  -->
-                <a href="login.php">
+                <a href="contact.php">
                     <button class="whybtn">
-                        Log in
+                        Contact Us
                     </button>
                 </a>
 
@@ -406,7 +439,7 @@
                     <div>
                         <a href="login.php">
                             <button class="loginbtn2">
-                                Log in
+                                Login
                             </button>
                         </a>
                     </div>

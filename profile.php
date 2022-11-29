@@ -44,11 +44,14 @@
     <!------------ FOR BACK END ------------>
     <!-- BUTTON (LOGIN)  -->
     <div>
-        <a href="login.php">
+        <a href="profile.php">
             <button class="loginbtn">
-                Log in
+                Profile
             </button>
         </a>
+        <form action="logout.php" method="POST">
+            <input value="Logout" type="submit" class="loginbtn"></input>
+        </form>
     </div>
 
 </nav>
