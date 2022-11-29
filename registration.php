@@ -33,7 +33,7 @@
         <div class="box-content">
             <img src="images/pets-banner.png" class="image">
             <h3 style="padding: 1rem 1rem 0 1rem;">Register for a free account</h3>
-            <form class="row g-6" action="/createAccount.php" onsubmit="return validate_password()" method="POST">
+            <form class="row g-6" action="/create.php" onsubmit="return validate_password()" method="POST">
                 <div class="col-md-6 form" >
                     <input type="text" class="form-control" name="first_name"
                     id="first_name" placeholder="First name" required>

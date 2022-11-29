@@ -1,3 +1,6 @@
+<?php
+    require "retrieve.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,11 +53,19 @@
         <!------------ FOR BACK END ------------>
         <!-- BUTTON (LOGIN)  -->
         <div>
-            <a href="login.php">
-                <button class="loginbtn">
-                    Log in
-                </button>
-            </a>
+        <?php $data = mysqli_fetch_array($result); ?>
+        <?php
+            if(!empty($_SESSION["email"])){
+                echo "Welcome ". "<a href='profile.php'>".$data['first_name']."</a>";
+            } else {
+                echo 
+                '<a href="profile.php">
+                    <button class="loginbtn">
+                        Login
+                    </button>
+                </a>';
+            }
+        ?>
         </div>
     </nav>
 
