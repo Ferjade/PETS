@@ -8,6 +8,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
+    <style>
+        .welcome-text{
+            color: white;
+            position: relative;
+            top: 0.5rem;
+            right: 3rem;
+            font-size: 17px;
+            font-weight: 700;
+        }
+        .welcome-link{
+            text-decoration: none;
+            color: #fbbe28;
+            font-size: 17px;
+        }
+        .welcome-link:hover{
+            color: #fbbe28;
+            text-decoration: underline;
+        }
+        .logoutbtn{
+            width: 100px;
+            position: relative;
+            right: 7rem;
+            padding: 2px 15px;
+            border-radius: 70px;
+            outline: none;
+            background: #fbbe28;
+            border:1px solid white;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #e8f9fd;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            transition: .3s ease-in-out;
+        }
+        .logoutbtn:hover{
+            color: #fbbe28;
+            background: #ff1e00;
+            scale: 1.1;
+            font-weight: 800;
+        }
+    </style>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -16,45 +58,57 @@
     <!-- Bootstrap ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/style-profile.css">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
-<nav class="container-fluid sticky-top">
-    <!-- LOGO -->
-    <a href="index.php">
-        <img src="./images/newlogo.png" class="logo" alt="P.E.T.S logo">
-    </a>
-    <!------------ FOR BACK END ------------>
-    <!-- Page navigation link -->
-    <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Forums</a></li>
-    </ul>
-
-    <!------------ FOR BACK END ------------>
-    <!-- Search Function (OPTIONAL) -->
-    <form action="submit" method="get" class="search-bar">
-        <button><i class="bi bi-search"></i></button>
-        <input type="text" class="search-area" placeholder=" Search" />
-        <button><i class="bi bi-mic-fill"></i></button>
-    </form>
-
-
-    <!------------ FOR BACK END ------------>
-    <!-- BUTTON (LOGIN)  -->
-    <div>
-        <a href="profile.php">
-            <button class="loginbtn">
-                Profile
-            </button>
+<!-- ORIGINAL NAVBAR -->
+    <!-- NAV BAR -->
+    <nav class="container-fluid sticky-top">
+        <!-- LOGO -->
+        <a href="#">
+            <img src="./images/newlogo.png" class="logo" alt="P.E.T.S logo">
         </a>
-        <form action="logout.php" method="POST">
-            <input value="Logout" type="submit" class="loginbtn"></input>
-        </form>
-    </div>
+        <!------------ FOR BACK END ------------>
+        <!-- Page navigation link -->
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="forums.php">Forums</a></li>
+        </ul>
 
-</nav>
+        <!------------ FOR BACK END ------------>
+        <!-- Search Function (OPTIONAL) -->
+        <form action="submit" method="get" class="search-bar">
+            <button><i class="bi bi-search"></i></button>
+            <input type="text" class="search-area" placeholder=" Search" />
+            <button><i class="bi bi-mic-fill"></i></button>
+        </form>
+
+
+        <!------------ FOR BACK END ------------>
+        <!-- BUTTON (LOGIN)  -->
+        <?php
+            if(!empty($_SESSION["first_name"])){
+                echo
+                '
+                    <p class="welcome-text"> Welcome <a href="profile.php" class="welcome-link">'.$_SESSION['first_name'].'</a></p>
+                
+                    <form action="logout.php" method="POST">
+                        <button class="logoutbtn" type="submit">Logout</button>
+                    </form>
+                ';
+            } else {
+                echo 
+                '<a href="login.php">
+                    <button class="loginbtn">
+                        Login
+                    </button>
+                </a>';
+            }
+        ?>
+    </nav>
 
 <div class="card user_card">
 <div class="card-body user_card_body">
