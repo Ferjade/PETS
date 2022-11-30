@@ -71,7 +71,7 @@ nav ul li a:hover {
   border-radius: 50px;
   outline: none;
   position: relative;
-  right: 3em;
+  right: 1em;
 }
 
 nav form button {
@@ -592,4 +592,4 @@ nav form button:hover {
 .reveal.current {
   transform: translateY(0px);
   opacity: 1;
-}/*# sourceMappingURL=style.css.map */
+}

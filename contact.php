@@ -1,5 +1,5 @@
 <?php
-    require "retrieve.php";
+    require "authenticate.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +9,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P.E.T.S</title>
+    <style>
+        .welcome-text{
+            color: white;
+            position: relative;
+            top: 0.5rem;
+            right: 3rem;
+            font-size: 17px;
+            font-weight: 700;
+        }
+        .welcome-link{
+            text-decoration: none;
+            color: #fbbe28;
+            font-size: 17px;
+        }
+        .welcome-link:hover{
+            color: #fbbe28;
+            text-decoration: underline;
+        }
+        .logoutbtn{
+            width: 100px;
+            position: relative;
+            right: 7rem;
+            padding: 2px 15px;
+            border-radius: 70px;
+            outline: none;
+            background: #fbbe28;
+            border:1px solid white;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #e8f9fd;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            transition: .3s ease-in-out;
+        }
+        .logoutbtn:hover{
+            color: #fbbe28;
+            background: #ff1e00;
+            scale: 1.1;
+            font-weight: 800;
+        }
+    </style>
     <link rel="stylesheet" href="./css/style-contact.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
@@ -52,16 +94,16 @@
 
         <!------------ FOR BACK END ------------>
         <!-- BUTTON (LOGIN)  -->
-        <div>
         <?php
             if(!empty($_SESSION["first_name"])){
-                echo "Welcome ". "<a href='profile.php'>".$_SESSION['first_name']."</a>";
-                echo 
+                echo
                 '
-                <form action="logout.php" method="POST">
-                    <input value="Logout" type="submit" class="loginbtn"></input>
-                </form>';
+                    <p class="welcome-text"> Welcome <a href="profile.php" class="welcome-link">'.$_SESSION['first_name'].'</a></p>
                 
+                    <form action="logout.php" method="POST">
+                        <button class="logoutbtn" type="submit">Logout</button>
+                    </form>
+                ';
             } else {
                 echo 
                 '<a href="login.php">
@@ -71,7 +113,6 @@
                 </a>';
             }
         ?>
-        </div>
     </nav>
 
     <!--MAIN CONTACT FORM-->

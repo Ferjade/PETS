@@ -87,15 +87,13 @@ nav ul li a:hover{
     border: 1px solid $white;
 } 
 
-
-
 // Search box
 .search-bar{
     background: white;
     border-radius: 50px;
     outline: none;
     position: relative;
-    right: 3em;
+    right: 1em;
 }
 
 nav form button{
@@ -113,7 +111,6 @@ nav form button{
     font-weight: 600;
     color: gray;
 }
-
 
 nav form button:hover{
     color: $light;
@@ -141,7 +138,6 @@ nav form button:hover{
     scale: 1.1;
     font-weight: 800;
 }
-
 
 
 // Main// 
