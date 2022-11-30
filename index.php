@@ -56,7 +56,7 @@
                 echo 
                 '
                 <form action="logout.php" method="POST">
-                    <input value="Logout" type="submit" class="btn"></input>
+                    <input value="Logout" type="submit" class="loginbtn"></input>
                 </form>';
                 
             } else {
