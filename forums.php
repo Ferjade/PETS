@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
     require "authenticate.php";
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 
