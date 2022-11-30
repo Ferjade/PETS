@@ -1,5 +1,5 @@
 <?php
-    require "retrieve.php"
+    require "retrieve.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,62 +7,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>P.E.T.S</title>
     <style>
-        .welcome-text{
-            color: white;
-            position: relative;
-            top: 0.5rem;
-            right: 3rem;
-            font-size: 17px;
-            font-weight: 700;
-        }
-        .welcome-link{
-            text-decoration: none;
-            color: #fbbe28;
-            font-size: 17px;
-        }
-        .welcome-link:hover{
-            color: #fbbe28;
-            text-decoration: underline;
-        }
-        .logoutbtn{
-            width: 100px;
-            position: relative;
-            right: 7rem;
-            padding: 2px 15px;
-            border-radius: 70px;
-            outline: none;
-            background: #fbbe28;
-            border:1px solid white;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #e8f9fd;
-            position: relative;
-            z-index: 2;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-            transition: .3s ease-in-out;
-        }
-        .logoutbtn:hover{
-            color: #fbbe28;
-            background: #ff1e00;
-            scale: 1.1;
-            font-weight: 800;
-        }
+    .welcome-text {
+        color: white;
+        position: relative;
+        top: 0.5rem;
+        right: 3rem;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    .welcome-link {
+        text-decoration: none;
+        color: #fbbe28;
+        font-size: 17px;
+    }
+
+    .welcome-link:hover {
+        color: #fbbe28;
+        text-decoration: underline;
+    }
+
+    .logoutbtn {
+        width: 100px;
+        position: relative;
+        right: 7rem;
+        padding: 2px 15px;
+        border-radius: 70px;
+        outline: none;
+        background: #fbbe28;
+        border: 1px solid white;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #e8f9fd;
+        position: relative;
+        z-index: 2;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        transition: .3s ease-in-out;
+    }
+
+    .logoutbtn:hover {
+        color: #fbbe28;
+        background: #ff1e00;
+        scale: 1.1;
+        font-weight: 800;
+    }
     </style>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-profile.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
     <!-- Bootstrap ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="css/style-profile.css">
-    <link rel="stylesheet" href="./css/style.css">
-
 </head>
+
 <body>
-<!-- ORIGINAL NAVBAR -->
+    <!-- ORIGINAL NAVBAR -->
     <!-- NAV BAR -->
     <nav class="container-fluid sticky-top">
         <!-- LOGO -->
@@ -110,8 +118,9 @@
         ?>
     </nav>
 
-<div class="card user_card">
-<div class="card-body user_card_body">
+    <!-- MAIN -->
+    <div class="card user_card">
+    <div class="card-body user_card_body">
     <div class="container left-container">
         <h2 class="left-container-header">User Information</h2>
         <div class="circle">
@@ -140,7 +149,7 @@
         <table>
         <?php
             while($row = mysqli_fetch_array($result2)){?>
-                <div class="card pet_card" style="width: 30%; display: inline-block;">
+                <div class="card" style="width: 18rem;">
                 <img src="images/caticon.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $row['pet_name'] ?></h5>
@@ -244,8 +253,9 @@
         </div>
     </div>
     </div>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+
 </body>
+
 </html>
