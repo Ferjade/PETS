@@ -10,46 +10,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P.E.T.S</title>
     <style>
-        .welcome-text{
-            color: white;
-            position: relative;
-            top: 0.5rem;
-            right: 3rem;
-            font-size: 17px;
-            font-weight: 700;
-        }
-        .welcome-link{
-            text-decoration: none;
-            color: #fbbe28;
-            font-size: 17px;
-        }
-        .welcome-link:hover{
-            color: #fbbe28;
-            text-decoration: underline;
-        }
-        .logoutbtn{
-            width: 100px;
-            position: relative;
-            right: 7rem;
-            padding: 2px 15px;
-            border-radius: 70px;
-            outline: none;
-            background: #fbbe28;
-            border:1px solid white;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #e8f9fd;
-            position: relative;
-            z-index: 2;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-            transition: .3s ease-in-out;
-        }
-        .logoutbtn:hover{
-            color: #fbbe28;
-            background: #ff1e00;
-            scale: 1.1;
-            font-weight: 800;
-        }
+    .welcome-text {
+        color: white;
+        position: relative;
+        top: 0.5rem;
+        right: 3rem;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    .welcome-link {
+        text-decoration: none;
+        color: #fbbe28;
+        font-size: 17px;
+    }
+
+    .welcome-link:hover {
+        color: #fbbe28;
+        text-decoration: underline;
+    }
+
+    .logoutbtn {
+        width: 100px;
+        position: relative;
+        right: 7rem;
+        padding: 2px 15px;
+        border-radius: 70px;
+        outline: none;
+        background: #fbbe28;
+        border: 1px solid white;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #e8f9fd;
+        position: relative;
+        z-index: 2;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        transition: .3s ease-in-out;
+    }
+
+    .logoutbtn:hover {
+        color: #fbbe28;
+        background: #ff1e00;
+        scale: 1.1;
+        font-weight: 800;
+    }
     </style>
     <link rel="stylesheet" href="./css/style.css">
     <!-- Favicon -->
@@ -123,8 +127,7 @@
             <h5>Finding our beloved pets has never <br> been this easy</h5>
             <br>
             <a href="login.php">
-                <button class="mainbtn"
-                style="<?php 
+                <button class="mainbtn" style="<?php 
                 if(!empty($_SESSION["email"])){
                         echo 'display: none;';
                     } else {
@@ -164,7 +167,7 @@
 
             <div class="row text-center offer reveal">
 
-                <div class="col-lg-3 services mx-4 py-4 px-2">
+                <div class="col-lg-3 services mx-4 py-4 px-3">
                     <img src="./images/carddog1.png" class="services-img" alt="">
                     <h4 class="bold">Social media <br> announcement</h4>
                     <p class="par2">To post your lost pet in the PAWS Facebook page, kindly email their photo to
@@ -172,7 +175,7 @@
                         with the subject line LOST PET.</p>
                 </div>
 
-                <div class="col-lg-3 services mx-4 py-4 px-2">
+                <div class="col-lg-3 services mx-4 py-4 px-3">
                     <img src="./images/carddog2.png" class="services-img" alt="">
                     <h4 class="bold">Community <br> search</h4>
                     <p class="par2">Check your city pound immediately. If your pet was loose on the streets, he/she
@@ -181,7 +184,7 @@
                         picked up by authorized catchers.</p>
                 </div>
 
-                <div class="col-lg-3 services mx-4 py-4 px-2">
+                <div class="col-lg-3 services mx-4 py-4 px-3">
                     <img src="./images/carddog3.png" class="services-img" alt="">
                     <h4 class="bold">Fostering <br> found pets</h4>
                     <p class="par2">People are encouraged to foster the lost pet or find someone to foster it, in
@@ -222,8 +225,7 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (LOGIN)  -->
                     <a href="#">
-                        <button class="big-btn" 
-                        style="<?php if(!empty($_SESSION["email"])){
+                        <button class="big-btn" style="<?php if(!empty($_SESSION["email"])){
                             echo 'display: none;';
                         } else {
                             echo '';
@@ -259,8 +261,7 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (LOGIN)  -->
                     <a href="#">
-                        <button class="big-btn"
-                        style="<?php if(!empty($_SESSION["email"])){
+                        <button class="big-btn" style="<?php if(!empty($_SESSION["email"])){
                             echo 'display: none;';
                         } else {
                             echo '';
