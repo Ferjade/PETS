@@ -140,7 +140,7 @@
         <table>
         <?php
             while($row = mysqli_fetch_array($result2)){?>
-                <div class="card" style="width: 18rem;">
+                <div class="card pet_card" style="width: 30%; display: inline-block;">
                 <img src="images/caticon.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $row['pet_name'] ?></h5>
