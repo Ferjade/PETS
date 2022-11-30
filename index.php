@@ -1,6 +1,3 @@
-<?php
-    require "authenticate.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,25 +50,11 @@
         <!------------ FOR BACK END ------------>
         <!-- BUTTON (LOGIN)  -->
         <div>
-        <?php
-            if(!empty($_SESSION["first_name"])){
-                echo "Welcome ". "<a href='profile.php'>".$_SESSION['first_name']."</a>";
-                echo 
-                '
-                <form action="logout.php" method="POST">
-                    <input value="Logout" type="submit" class="loginbtn"></input>
-                </form>';
-                
-            } else {
-                echo 
-                '<a href="login.php">
-                    <button class="loginbtn">
-                        Login
-                    </button>
-                </a>';
-            }
-        ?>
-
+            <a href="login.php">
+                <button class="loginbtn">
+                    Log in
+                </button>
+            </a>
         </div>
 
     </nav>
@@ -84,13 +67,7 @@
             <h5>Finding our beloved pets has never <br> been this easy</h5>
             <br>
             <a href="login.php">
-                <button class="mainbtn"
-                style="<?php 
-                if(!empty($_SESSION["email"])){
-                        echo 'display: none;';
-                    } else {
-                        echo '';
-                    }?>">
+                <button class="mainbtn">
                     Log in
                 </button>
             </a>
@@ -125,7 +102,7 @@
 
             <div class="row text-center offer reveal">
 
-                <div class="col-lg-3 services mx-4 py-4 px-2">
+                <div class="col-lg-3 services mx-4 py-4 px-3">
                     <img src="./images/carddog1.png" class="services-img" alt="">
                     <h4 class="bold">Social media <br> announcement</h4>
                     <p class="par2">To post your lost pet in the PAWS Facebook page, kindly email their photo to
@@ -133,7 +110,7 @@
                         with the subject line LOST PET.</p>
                 </div>
 
-                <div class="col-lg-3 services mx-4 py-4 px-2">
+                <div class="col-lg-3 services mx-4 py-4 px-3">
                     <img src="./images/carddog2.png" class="services-img" alt="">
                     <h4 class="bold">Community <br> search</h4>
                     <p class="par2">Check your city pound immediately. If your pet was loose on the streets, he/she
@@ -142,7 +119,7 @@
                         picked up by authorized catchers.</p>
                 </div>
 
-                <div class="col-lg-3 services mx-4 py-4 px-2">
+                <div class="col-lg-3 services mx-4 py-4 px-3">
                     <img src="./images/carddog3.png" class="services-img" alt="">
                     <h4 class="bold">Fostering <br> found pets</h4>
                     <p class="par2">People are encouraged to foster the lost pet or find someone to foster it, in
@@ -183,12 +160,7 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (LOGIN)  -->
                     <a href="#">
-                        <button class="big-btn" 
-                        style="<?php if(!empty($_SESSION["email"])){
-                            echo 'display: none;';
-                        } else {
-                            echo '';
-                        }?>">
+                        <button class="big-btn">
                             Log in
                         </button>
                     </a>
@@ -220,12 +192,7 @@
                     <!------------ FOR BACK END ------------>
                     <!-- BUTTON (LOGIN)  -->
                     <a href="#">
-                        <button class="big-btn"
-                        style="<?php if(!empty($_SESSION["email"])){
-                            echo 'display: none;';
-                        } else {
-                            echo '';
-                        }?>">
+                        <button class="big-btn">
                             Register
                         </button>
                     </a>
@@ -372,9 +339,9 @@
 
                 <!------------ FOR BACK END ------------>
                 <!-- BUTTON (LOGIN)  -->
-                <a href="contact.php">
+                <a href="login.php">
                     <button class="whybtn">
-                        Contact Us
+                        Log in
                     </button>
                 </a>
 
@@ -439,7 +406,7 @@
                     <div>
                         <a href="login.php">
                             <button class="loginbtn2">
-                                Login
+                                Log in
                             </button>
                         </a>
                     </div>
