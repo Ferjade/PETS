@@ -212,3 +212,7 @@ nav form button:hover{
     color: white;
     margin-left: 1vw;
 }
+.pet_card{
+    width: 30%;
+    display: inline-block;
+}
