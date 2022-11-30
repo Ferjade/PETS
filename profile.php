@@ -56,21 +56,21 @@
 
 </nav>
 
-<div class="card">
-<div class="card-body">
+<div class="card user_card">
+<div class="card-body user_card_body">
     <div class="container left-container">
         <h2 class="left-container-header">User Information</h2>
         <div class="circle">
             <div class="profile-image"></div>
         </div>
-        <?php $data = mysqli_fetch_array($result); ?>
+        <?php $data = mysqli_fetch_array($result1); ?>
             <div class="rectangle"><div class="nameRetrieved"><?php echo 'Name: '.$data['first_name']." ".$data['last_name']; ?></div></div>
             <div class="rectangle"><div class="emailRetrieved"><?php echo 'Email: '.$data['email']; ?></div></div>
             <div class="rectangle"><div class="locationRetrieved"><?php 
             if ($data['address'] == ""){
                 echo 'Edit Info to add Location';
             } else {
-                echo 'Location: '.$data['email']; 
+                echo 'Location: '.$data['address'].' '.$data['city'].', '.$data['zip_code']; 
             }?></div></div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#editModal">
@@ -82,6 +82,19 @@
         <button type="button" class="btn btn-primary btn-lg mt-3" id="addPetBtn" data-bs-toggle="modal" data-bs-target="#addPetModal">
             Add Pet
         </button>
+
+        <table>
+        <?php
+            while($row = mysqli_fetch_array($result2)){?>
+                <div class="card" style="width: 18rem;">
+                <img src="images/caticon.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $row['pet_name'] ?></h5>
+                    <p class="card-text"><?php echo $row['pet_breed'] ?></p>
+                    <p class="card-text"><?php echo $row['pet_age'].' '.$row['pet_gender'] ?></p>
+                </div>
+                </div>
+        <?php } ?>
     </div>
 </div>
 </div>
@@ -96,7 +109,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form action="">
+            <form action="update.php" method="post">
                 <div class="form-group">
                     <label for="firstName" class="form-label">First Name</label>
                     <input type="text" class="form-control" id="firstName" name="firstName" value="<?php echo $data['first_name']; ?>">
@@ -116,20 +129,21 @@
                         <input type="text" class="form-control" id="address" name="address">
                         <label for="city" class="form-label">City</label>
                         <input type="text" class="form-control" id="city" name="city">
-                        <label for="region" class="form-label">Region</label>
+                        <label for="region" class="form-label">Region/State</label>
                         <input type="text" class="form-control" id="region" name="region">
                         <label for="zipcode" class="form-label">Zip Code</label>
                         <input type="text" class="form-control" id="zipcode" name="zipcode">
                     </fieldset>
                 </div>
                 <button type="button" class="btn btn-info btn-sm mt-2">Use my Location</button>
-            </form>
+           
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <input type="submit" value="Update" name="updateBtn" class="btn btn-primary">
         </div>
         </div>
+        </form>
     </div>
     </div>
 
@@ -157,7 +171,10 @@
                 </div>
                 <div class="form-group mt-1">
                     <label for="petGender" class="form-label">Pet Gender</label>
-                    <input type="text" class="form-control" id="petGender" name="petGender">
+                    <select name="petGender" id="petGender" class="form-select">
+                        <option value="Male" selected>Male</option>
+                        <option value="Female">Female</option>
+                    </select>
                 </div>
                 <div class="form-group mt-1">
                     <label for="petImage" class="form-label">Upload Picture</label>
