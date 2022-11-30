@@ -1,3 +1,6 @@
+<?php
+    require "authenticate.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,13 +53,25 @@
         <!------------ FOR BACK END ------------>
         <!-- BUTTON (LOGIN)  -->
         <div>
-            <a href="login.php">
-                <button class="loginbtn">
-                    Log in
-                </button>
-            </a>
+        <?php
+            if(!empty($_SESSION["first_name"])){
+                echo "Welcome ". "<a href='profile.php'>".$_SESSION['first_name']."</a>";
+                echo 
+                '
+                <form action="logout.php" method="POST">
+                    <input value="Logout" type="submit" class="loginbtn"></input>
+                </form>';
+                
+            } else {
+                echo 
+                '<a href="login.php">
+                    <button class="loginbtn">
+                        Login
+                    </button>
+                </a>';
+            }
+        ?>
         </div>
-
     </nav>
 
     <!-- Main -->

@@ -36,9 +36,9 @@
         <!-- Page navigation link -->
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="contact.php" class="active">Contact</a></li>
-            <li><a href="#">Forums</a></li>
+            <li><a href="">Forums</a></li>
         </ul>
 
         <!------------ FOR BACK END ------------>
@@ -53,13 +53,18 @@
         <!------------ FOR BACK END ------------>
         <!-- BUTTON (LOGIN)  -->
         <div>
-        <?php $data = mysqli_fetch_array($result); ?>
         <?php
-            if(!empty($_SESSION["email"])){
-                echo "Welcome ". "<a href='profile.php'>".$data['first_name']."</a>";
+            if(!empty($_SESSION["first_name"])){
+                echo "Welcome ". "<a href='profile.php'>".$_SESSION['first_name']."</a>";
+                echo 
+                '
+                <form action="logout.php" method="POST">
+                    <input value="Logout" type="submit" class="loginbtn"></input>
+                </form>';
+                
             } else {
                 echo 
-                '<a href="profile.php">
+                '<a href="login.php">
                     <button class="loginbtn">
                         Login
                     </button>
@@ -70,44 +75,90 @@
     </nav>
 
     <!--MAIN CONTACT FORM-->
-    <div class="container-form">
-        <div class="row">
-            <div class="col-md-5">
-                <img src="images/HeroIMG1.png" class="contact-img" alt="">
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-5">
-                <div class="row form-box" style="padding: 2rem;">
-                    <h2 style="text-align: center; color: white;">Contact Us</h2>
-                    <form class="row g-6" action="/createContact.php" method="POST">
-                        <div class="col input">
-                            <input type="text" class="form-control" placeholder="First name" 
-                            name="first_name" id="first_name" required>
+    <?php
+            if(!empty($_SESSION["first_name"])){
+                echo 
+                '<div class="container-form">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="images/HeroIMG1.png" class="contact-img" alt="">
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                        <div class="row form-box" style="padding: 2rem;">
+                            <h2 style="text-align: center; color: white;">Contact Us</h2>
+                            <form class="row g-6" action="/createContact.php" method="POST">
+                                <div class="col input">
+                                    <input type="text" class="form-control" placeholder="First name" 
+                                    name="first_name" id="first_name" required>
+                                </div>
+                                <div class="col input">
+                                    <input type="text" class="form-control" placeholder="Last name" 
+                                    name="last_name" id="last_name" required>
+                                </div> <br/>
+                                <div class="col-md-12 input">
+                                    <input type="text" class="form-control" placeholder="Contact" 
+                                    name="phone" id="phone" required>
+                                </div>
+                                <div class="col-md-12 input">
+                                    <input type="text" class="form-control" placeholder="Subject" 
+                                    name="subject" id="subject" required>
+                                </div>
+                                <div class="col-md-12 input">
+                                    <textarea class="form-control" placeholder="Leave your message here"  name="inquiry" id="inquiry"
+                                    style="height: 200px" required></textarea>
+                                </div>
+                                <div class="d-grid gap-2">
+                                  <input class="btn btn-warning" name="submitbtn" style="color: white;" type="submit" value="Submit"></input>
+                                </div>
+                            </form>
                         </div>
-                        <div class="col input">
-                            <input type="text" class="form-control" placeholder="Last name" 
-                            name="last_name" id="last_name" required>
-                        </div> <br/>
-                        <div class="col-md-12 input">
-                            <input type="text" class="form-control" placeholder="Contact" 
-                            name="phone" id="phone" required>
-                        </div>
-                        <div class="col-md-12 input">
-                            <input type="text" class="form-control" placeholder="Subject" 
-                            name="subject" id="subject" required>
-                        </div>
-                        <div class="col-md-12 input">
-                            <textarea class="form-control" placeholder="Leave your message here"  name="inquiry" id="inquiry"
-                            style="height: 200px" required></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                          <input class="btn btn-warning" name="submitbtn" style="color: white;" type="submit" value="Submit"></input>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div>';
+            } else {
+                echo 
+                '<div class="container-form">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="images/HeroIMG1.png" class="contact-img" alt="">
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                        <div class="row form-box" style="padding: 2rem;">
+                            <h2 style="text-align: center; color: white;">Contact Us</h2>
+                            <form class="row g-6" action="/createContact.php" method="POST">
+                                <div class="col input">
+                                    <input type="text" class="form-control" placeholder="First name" 
+                                    name="first_name" id="first_name" readonly>
+                                </div>
+                                <div class="col input">
+                                    <input type="text" class="form-control" placeholder="Last name" 
+                                    name="last_name" id="last_name" readonly>
+                                </div> <br/>
+                                <div class="col-md-12 input">
+                                    <input type="text" class="form-control" placeholder="Contact" 
+                                    name="phone" id="phone" readonly>
+                                </div>
+                                <div class="col-md-12 input">
+                                    <input type="text" class="form-control" placeholder="Subject" 
+                                    name="subject" id="subject" readonly>
+                                </div>
+                                <div class="col-md-12 input">
+                                    <textarea class="form-control" placeholder="Leave your message here"  name="inquiry" id="inquiry"
+                                    style="height: 200px" readonly></textarea>
+                                </div>
+                                <div class="d-grid gap-2">
+                                  <input class="btn btn-warning" style="color: white;" type="button" value="Submit"></input>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>';
+            }
+    
+    ?>
     <!--END MAIN CONTACT FORM-->
 
     
