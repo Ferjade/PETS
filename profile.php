@@ -3,6 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,9 +54,88 @@
         scale: 1.1;
         font-weight: 800;
     }
+
+    /* CSS */
+    .user_card_body{
+    width: 100%;
+    height: 100%;
+    display:flex
+    }
+    .left-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .right-container{
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        background-color: #ff862f;
+        border-radius: 25px;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+    }
+    #addPetBtn{
+        width: 8vw;
+    }
+    .left-container-header{
+        margin-top: 3vh;
+        margin-left: 3vh;
+    }
+    .right-container-header{
+        margin-top: 3vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .profile-image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18vw;
+        height: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .rectangleSection{
+        width: 80%;
+        height: 8vh;
+        border-radius: 5px;
+        background-color: grey;
+        margin-top: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nameRetrieved{
+        color: white;
+        margin-left: 1vw;
+    }
+    .emailRetrieved{
+        color: white;
+        margin-left: 1vw;
+    }
+    .locationRetrieved{
+        color: white;
+        margin-left: 1vw;
+    }
+    .pet-card-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .pet_card{
+        width: 30%;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+    
     </style>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style-profile.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <!-- CSS only -->
@@ -118,18 +198,28 @@
         ?>
     </nav>
 
+
     <!-- MAIN -->
     <div class="card user_card">
     <div class="card-body user_card_body">
     <div class="container left-container">
-        <h2 class="left-container-header">User Information</h2>
-        <div class="circle">
-            <div class="profile-image"></div>
-        </div>
         <?php $data = mysqli_fetch_array($result1); ?>
-            <div class="rectangle"><div class="nameRetrieved"><?php echo 'Name: '.$data['first_name']." ".$data['last_name']; ?></div></div>
-            <div class="rectangle"><div class="emailRetrieved"><?php echo 'Email: '.$data['email']; ?></div></div>
-            <div class="rectangle"><div class="locationRetrieved"><?php 
+        <div class="left-container-header"><h2>User Information</h2></div>
+        <div class="profile-image-container"><div class="profile-image"><img src="
+        <?php 
+        if($data['profile_image'] == ""){
+           echo "./images/defaultPFP.jpg"; 
+        } else {
+            echo "./profile-image/".$data['profile_image'];
+        }?>" style='height: 100%; width: 100%; object-fit: contain; border-radius: 50%;'></div></div>
+        <div>
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadImage">
+                Upload Image
+            </button>
+        </div>
+            <div class="rectangleSection"><div class="nameRetrieved"><?php echo 'Name: '.$data['first_name']." ".$data['last_name']; ?></div></div>
+            <div class="rectangleSection"><div class="emailRetrieved"><?php echo 'Email: '.$data['email']; ?></div></div>
+            <div class="rectangleSection"><div class="locationRetrieved"><?php 
             if ($data['address'] == ""){
                 echo 'Edit Info to add Location';
             } else {
@@ -145,22 +235,23 @@
         <button type="button" class="btn btn-primary btn-lg mt-3" id="addPetBtn" data-bs-toggle="modal" data-bs-target="#addPetModal">
             Add Pet
         </button>
-
-        <table>
-        <?php
-            while($row = mysqli_fetch_array($result2)){?>
-                <div class="card" style="width: 18rem;">
-                <img src="images/caticon.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $row['pet_name'] ?></h5>
-                    <p class="card-text"><?php echo $row['pet_breed'] ?></p>
-                    <p class="card-text"><?php echo $row['pet_age'].' '.$row['pet_gender'] ?></p>
-                </div>
-                </div>
-        <?php } ?>
+        <div class="pet-card-container">
+            <?php
+                while($row = mysqli_fetch_array($result2)){?>
+                    <div class="card pet_card">
+                    <img src="images/caticon.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $row['pet_name'] ?></h5>
+                        <p class="card-text"><?php echo $row['pet_breed'] ?></p>
+                        <p class="card-text"><?php echo $row['pet_age'].' '.$row['pet_gender'] ?></p>
+                    </div>
+                    </div>
+            <?php } ?>
+        </div>
+    </div>
     </div>
 </div>
-</div>
+
 
 
     <!-- Edit Modal -->
@@ -254,8 +345,59 @@
     </div>
     </div>
 
+    
+
+
+    <!-- Create Post Modal -->
+    <div class="modal fade" id="createpostModal" tabindex="-1" aria-labelledby="createpostModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editModalLabel">Create Post</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="createPost.php" method="post">
+                <div class="form-group">
+                    <label for="post_title" class="form-label">Post Title</label>
+                    <input type="text" class="form-control" id="post_title" name="post_title"?>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="post_message" class="form-label">Message</label>
+                    <textarea cols="30" rows="10" class="form-control" id="post_message" name="post_message"></textarea>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <input type="submit" value="Create Post" name="createPost" class="btn btn-primary">
+        </div>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <!-- Upload Image Modal -->
+    <div class="modal fade" id="uploadImage" tabindex="-1" aria-labelledby="uploadImage" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="uploadImageLabel">Upload Image</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="uploadImage.php" method="post" enctype="multipart/form-data"> 
+                <div class="form-group">
+                    <input class="form-control" type="file" name="uploadfile" id="uploadfile"/>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <input type="submit" value="Upload Image" name="uploadImagebtn" class="btn btn-primary">
+        </div>
+        </div>
+        </form>
+    </div>
+    </div>
 
 
 </body>
-
-</html>
