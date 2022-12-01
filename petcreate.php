@@ -1,6 +1,7 @@
 <?php
-    require "connection.php";
     require "session.php";
+    require "connection.php";
+    
 
     if(isset($_POST['petAddBtn'])){
         $petName = $_POST['petName'];

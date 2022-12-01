@@ -154,7 +154,7 @@
     <!-- NAV BAR -->
     <nav class="container-fluid sticky-top">
         <!-- LOGO -->
-        <a href="#">
+        <a href="index.php">
             <img src="./images/newlogo.png" class="logo" alt="P.E.T.S logo">
         </a>
         <!------------ FOR BACK END ------------>
@@ -330,10 +330,10 @@
                         <option value="Female">Female</option>
                     </select>
                 </div>
-                <div class="form-group mt-1">
+                <!-- <div class="form-group mt-1">
                     <label for="petImage" class="form-label">Upload Picture</label>
                     <input type="file" class="form-control" id="petImage" name="petImage">
-                </div>
+                </div> -->
             
                 </div>
                 <div class="modal-footer">

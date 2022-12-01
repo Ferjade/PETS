@@ -124,7 +124,7 @@
         <div class="container">
             <div class="subforum">
                 <div class="subforum-title">
-                    <h1>General Information</h1>
+                    <h1>General Thread</h1>
                     <span class="create-post">
                         <button type="button" class="createpostbtn" id="createpostbtn" data-bs-toggle="modal" data-bs-target="#createpostModal">Create Post</button>
                     </span>
@@ -140,7 +140,7 @@
                                 echo "./images/defaultPFP.jpg"; 
                                 } else {
                                     echo "./profile-image/".$row['profile_image'];
-                                }?>" style='height: 100%; width: 100%; object-fit: contain; border-radius: 50%;'>
+                                }?>" style='height: 100%; width: 100%; object-fit: contain;'>
                             </div>
                             <div class="subforum-description subforum-column">
                                 <h4><?php echo $row['post_title'] ?></h4>
@@ -268,7 +268,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
-            <h1 class="modal-title fs-5" id="editModalLabel">Create Post</h1>
+            <h1 class="modal-title fs-5" id="editModalLabel">Lost Pet Details</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
