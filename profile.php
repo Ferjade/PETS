@@ -125,7 +125,7 @@
     .pet-card-container{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
     }
     .pet_card{

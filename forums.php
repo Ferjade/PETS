@@ -147,7 +147,7 @@
                                 <p><?php echo $row['post_message'] ?></p>
                                 <p><?php if($row['post_address'] == "" && $row['post_city'] == "" && $row['post_zip_code'] == ""){
                                     echo 'Please Add Location';
-                                } else {echo 'Location: '.$row['post_address'].' '.$row['post_city'].', '.$row['post_zip_code'];}
+                                } else {echo 'Last Seen At: '.$row['post_address'].' '.$row['post_city'].', '.$row['post_zip_code'];}
                                 ?></p>
                             </div>
                             <div class="subforum-stats subforum-column center">
@@ -156,6 +156,10 @@
                             <div class="subforum-info subforum-column">
                                 <b><a href="">Last post</a></b> by <a href=""><?php echo $row['first_name'] ?></a>
                                 <br>on <small><?php echo $row['date_created'] ?></small>
+                                <form action="delete.php" method="POST">
+                                    <input type="submit" value="Delete" name="delete" onclick="return confirm('Do you want to delete?')"/>
+                                    <input type="hidden" name="id" value="<?php echo $row["post_id"] ?>"/>
+                                </form>
                             </div>
                         </div>
                 <?php } ?>
@@ -279,7 +283,7 @@
                 </div>
                 <div class="form-group mt-1">
                     <fieldset>
-                        <legend>Location:</legend>
+                        <legend>Last Seen:</legend>
                         <label for="address" class="form-label">Address</label>
                         <input type="text" class="form-control" id="address" name="address" value="<?php echo $data['address']?>">
                         <label for="city" class="form-label" value="<?php $data['city']?>">City</label>
